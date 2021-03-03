@@ -27,7 +27,7 @@ public class ThirdTask {
         return ip;
     }
     public static String getAnswer (String ip, ArrayList<String> commands){
-        Access answer = Access.GRANTED;
+        String answer = "GRANTED";
         boolean ruleIsTriggered;
         for(String command : commands) {
             String[] commandArray = command.split(" from ");
@@ -40,11 +40,11 @@ public class ThirdTask {
             }
             if (ruleIsTriggered) {
                 if (commandArray[0].equals("deny")){
-                    answer = Access.DENIED;}
+                    answer = "DENIED";}
                 break;
             }
         }
-        return answer.toString();
+        return answer;
     }
 
 }
